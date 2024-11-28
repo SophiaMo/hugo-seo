@@ -11,7 +11,7 @@
 {{ end }}
 
 {{/* We check the site config sports a Social.twitter and use as handle */}}
-{{ with $.c.Social.twitter  }}
+{{ with $.c.params.Social.twitter  }}
     {{  $.s.SetInMap "params" "twitter_site" (printf "@%s" .)  }}
 {{  end  }}
 
